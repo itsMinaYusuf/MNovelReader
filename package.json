@@ -12,6 +12,7 @@
     "build:open-apk": "open ./android/app/build/outputs/apk/release/",
     "generate:env:debug": "node scripts/generate-env-file.cjs --build-type Debug",
     "generate:env:release": "node scripts/generate-env-file.cjs --build-type Release",
+    "eas-build-post-install": "node scripts/generate-env-file.cjs --build-type Release",
     "release:package": "node scripts/package-release-artifacts.cjs",
     "release:prepare": "node scripts/prepare-release.cjs",
     "generate:string-types": "node scripts/generate-string-types.cjs",

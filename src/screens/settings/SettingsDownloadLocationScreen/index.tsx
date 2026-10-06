@@ -75,19 +75,27 @@ const DownloadLocationSettings = ({
             description={getString('downloadLocationScreen.downloadFolderDesc')}
             theme={theme}
             onPress={() => selectDirectory(DOWNLOADS_TREE_URI)}
-            right={usesFolder && downloadFolderUri === DOWNLOADS_TREE_URI ? 'check' : undefined}
+            right={
+              usesFolder && downloadFolderUri === DOWNLOADS_TREE_URI
+                ? 'check'
+                : undefined
+            }
           />
           <List.Item
             title={getString('downloadLocationScreen.customFolder')}
             description={
               usesFolder
-                ? (downloadFolderName ??
-                  getString('downloadLocationScreen.notSet'))
+                ? downloadFolderName ??
+                  getString('downloadLocationScreen.notSet')
                 : getString('downloadLocationScreen.customFolderDesc')
             }
             theme={theme}
             onPress={() => selectDirectory()}
-            right={usesFolder && downloadFolderUri !== DOWNLOADS_TREE_URI ? 'check' : undefined}
+            right={
+              usesFolder && downloadFolderUri !== DOWNLOADS_TREE_URI
+                ? 'check'
+                : undefined
+            }
           />
           <List.InfoItem
             title={getString('downloadLocationScreen.switchFolderWarning')}

@@ -2,7 +2,7 @@
   "expo": {
     "version": "2.1.4",
     "name": "LNReader",
-    "slug": "LNReader",
+    "slug": "mina",
     "scheme": "lnreader",
     "icon": "./assets/native/ic_launcher.png",
     "plugins": [

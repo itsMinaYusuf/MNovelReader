@@ -149,7 +149,9 @@ const ExportNovelAsEpubButton: React.FC<ExportNovelAsEpubButtonProps> = ({
                 chapterId: chapter.id,
               },
               chapter.downloadFileName ?? null,
-              `${NativeFile.ExternalCachesDirectoryPath}/epub-export-${Date.now()}`,
+              `${
+                NativeFile.ExternalCachesDirectoryPath
+              }/epub-export-${Date.now()}`,
             ),
             novelId: novel.id.toString(),
             chapterId: chapter.id.toString(),

@@ -188,7 +188,9 @@ describe('deleteChapterFiles', () => {
     nativeFile.deleteTreeFile.mockRejectedValue(new Error('FileNotFound'));
     nativeFile.exists.mockResolvedValue(false);
 
-    await expect(deleteChapterFiles(identity, 'a.html')).resolves.toBeUndefined();
+    await expect(
+      deleteChapterFiles(identity, 'a.html'),
+    ).resolves.toBeUndefined();
     expect(nativeFile.unlink).not.toHaveBeenCalled();
   });
 

@@ -159,7 +159,7 @@ export default function useChapter(
     return () => NativeVolumeButtonListener.setActive(false);
   }, [useVolumeButtons]);
 
-/**
+  /**
    * Reads the chapter from local storage, falling back to the plugin when it is
    * not downloaded. Storage lookup goes through the chapter-storage layer, which
    * knows whether this chapter was written to a user-granted folder or to the

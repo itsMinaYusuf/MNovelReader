@@ -59,7 +59,9 @@ export const BackupOptionsList = ({
 }: BackupOptionsListProps) => {
   const allSelected = areAllBackupOptionsSelected(options);
   const someSelected = hasSelectedBackupOption(options);
-  const folderStoredCount = useFolderStoredChapterCount(options.downloadedFiles);
+  const folderStoredCount = useFolderStoredChapterCount(
+    options.downloadedFiles,
+  );
 
   const toggleAll = useCallback(() => {
     const selected = !allSelected;

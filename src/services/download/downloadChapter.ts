@@ -102,7 +102,12 @@ const downloadChapter = async (chapterId: number) => {
       await NativeFile.writeFile(folder + '/.nomedia', '');
     }
 
-    const html = await localizeImages(chapterText, plugin, identity, usesFolder);
+    const html = await localizeImages(
+      chapterText,
+      plugin,
+      identity,
+      usesFolder,
+    );
     const downloadFileName = await writeChapterHtml(
       identity,
       { novelName: novel.name, chapterName: chapter.name },

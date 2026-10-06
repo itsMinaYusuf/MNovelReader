@@ -274,9 +274,7 @@ const getChapterDownloadFileNames = async (
     .where(inArray(chapterSchema.id, chapterIds))
     .all();
 
-  return new Map(
-    rows.map(row => [row.id, row.downloadFileName ?? null]),
-  );
+  return new Map(rows.map(row => [row.id, row.downloadFileName ?? null]));
 };
 
 /** Increases the timeSpent for the specified chapterId by the given amount */
@@ -684,7 +682,10 @@ export const getChaptersByIds = async (
  * that they will be left out of an archive.
  */
 export const getFolderStoredChapterCount = async (): Promise<number> =>
-  await dbManager.$count(chapterSchema, isNotNull(chapterSchema.downloadFileName));
+  await dbManager.$count(
+    chapterSchema,
+    isNotNull(chapterSchema.downloadFileName),
+  );
 
 export const getChapterCount = async (
   novelId: number,
